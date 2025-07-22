@@ -1,0 +1,28 @@
+# Node
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+
+# Vite
+.vite/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# System files
+*.swp
+*.swo

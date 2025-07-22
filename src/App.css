@@ -1,0 +1,306 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Tema Lua Cheia - Cores escuras com tons azulados e roxos */
+  --background: #1A1A2E; /* Roxo escuro/Azul marinho */
+  --foreground: #FFFFFF; /* Branco puro */
+  --card: #16213E; /* Azul escuro para cards */
+  --card-foreground: #FFFFFF;
+  --popover: #16213E;
+  --popover-foreground: #FFFFFF;
+  --primary: #8E9BFF; /* Azul claro da logo */
+  --primary-foreground: #1A1A2E;
+  --secondary: #A08AFF; /* Roxo da logo */
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A2A4E; /* Roxo mais claro para elementos muted */
+  --muted-foreground: #CCCCCC; /* Cinza claro */
+  --accent: #A08AFF; /* Roxo da logo */
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #3A3A5E; /* Bordas em tom roxo escuro */
+  --input: #2A2A4E;
+  --ring: #8E9BFF;
+  --chart-1: #8E9BFF;
+  --chart-2: #A08AFF;
+  --chart-3: #6B73FF;
+  --chart-4: #9B59B6;
+  --chart-5: #3498DB;
+  --sidebar: #16213E;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #8E9BFF;
+  --sidebar-primary-foreground: #1A1A2E;
+  --sidebar-accent: #A08AFF;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #3A3A5E;
+  --sidebar-ring: #8E9BFF;
+}
+
+.dark {
+  /* Mantendo o mesmo tema escuro para consistência */
+  --background: #1A1A2E;
+  --foreground: #FFFFFF;
+  --card: #16213E;
+  --card-foreground: #FFFFFF;
+  --popover: #16213E;
+  --popover-foreground: #FFFFFF;
+  --primary: #8E9BFF;
+  --primary-foreground: #1A1A2E;
+  --secondary: #A08AFF;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A2A4E;
+  --muted-foreground: #CCCCCC;
+  --accent: #A08AFF;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #3A3A5E;
+  --input: #2A2A4E;
+  --ring: #8E9BFF;
+  --chart-1: #8E9BFF;
+  --chart-2: #A08AFF;
+  --chart-3: #6B73FF;
+  --chart-4: #9B59B6;
+  --chart-5: #3498DB;
+  --sidebar: #16213E;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #8E9BFF;
+  --sidebar-primary-foreground: #1A1A2E;
+  --sidebar-accent: #A08AFF;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #3A3A5E;
+  --sidebar-ring: #8E9BFF;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+/* Estilos customizados para o tema Lua Cheia */
+.moon-gradient {
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #2A2A4E 100%);
+}
+
+.space-pattern {
+  background-image: radial-gradient(circle at 20% 80%, rgba(142, 155, 255, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(160, 138, 255, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.glow-effect {
+  box-shadow: 0 0 20px rgba(142, 155, 255, 0.3);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(142, 155, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #8E9BFF, #A08AFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animação sutil para elementos */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Estilo para cards de jogadores */
+.player-card {
+  background: rgba(22, 33, 62, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(142, 155, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.player-card:hover {
+  border-color: rgba(142, 155, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+/* Estilo para seção hero */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #2A2A4E 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(142, 155, 255, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(160, 138, 255, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+
+
+/* Tema Callisto - Cores escuras com tons de rosa */
+.theme-callisto {
+  --background: #1A1A2E; /* Roxo escuro/Azul marinho */
+  --foreground: #FFFFFF; /* Branco puro */
+  --card: #2E1A2E; /* Rosa escuro para cards */
+  --card-foreground: #FFFFFF;
+  --popover: #2E1A2E;
+  --popover-foreground: #FFFFFF;
+  --primary: #FF69B4; /* Rosa choque */
+  --primary-foreground: #1A1A2E;
+  --secondary: #FFC0CB; /* Rosa claro */
+  --secondary-foreground: #1A1A2E;
+  --muted: #3A2A3A; /* Rosa mais claro para elementos muted */
+  --muted-foreground: #CCCCCC; /* Cinza claro */
+  --accent: #FF69B4; /* Rosa choque */
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #5A3A5A; /* Bordas em tom rosa escuro */
+  --input: #3A2A3A;
+  --ring: #FF69B4;
+  --chart-1: #FF69B4;
+  --chart-2: #FFC0CB;
+  --chart-3: #FF8DC7;
+  --chart-4: #FFB6D9;
+  --chart-5: #FFD1E7;
+  --sidebar: #2E1A2E;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FF69B4;
+  --sidebar-primary-foreground: #1A1A2E;
+  --sidebar-accent: #FFC0CB;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #5A3A5A;
+  --sidebar-ring: #FF69B4;
+}
+
+.cor-cheia {
+  color: #8E9BFF;
+}
+
+.cor-cheia:hover {
+  color: #FF69B4;
+}
+
+.callisto-gradient {
+  background: linear-gradient(135deg, #1A1A2E 0%, #2E1A2E 50%, #3A2A3A 100%);
+}
+
+.callisto-space-pattern {
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 105, 180, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(255, 192, 203, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.callisto-glow-effect {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+}
+
+.callisto-hover-glow:hover {
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.callisto-text-gradient {
+  background: linear-gradient(135deg, #FF69B4, #FFC0CB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.callisto-player-card {
+  background: rgba(46, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 105, 180, 0.2);
+  transition: all 0.3s ease;
+}
+
+.callisto-player-card:hover {
+  border-color: rgba(255, 105, 180, 0.5);
+  transform: translateY(-5px);
+}
+
+.callisto-hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1A1A2E 0%, #2E1A2E 50%, #3A2A3A 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.callisto-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 105, 180, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(255, 192, 203, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 1s linear forwards;
+}
